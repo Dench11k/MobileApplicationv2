@@ -34,7 +34,7 @@ public class Fragment2 extends Fragment {
         View view1 = inflater.inflate(R.layout.fragment_2,container,false);
         listview = (ListView) view1.findViewById(R.id.listview);
         ArrayList<Car> arrayList = new ArrayList<>();
-        for (int i = 0; i < 26; i++){
+        for (int i = 0; i < 30; i++){
             arrayList.add(new Car(R.drawable.granta,"Lada Granta"));
             arrayList.add(new Car(R.drawable.vesta,"Lada Vesta"));
             arrayList.add(new Car(R.drawable.m8,"BMW M8"));
