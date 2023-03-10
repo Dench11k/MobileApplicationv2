@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
@@ -47,7 +48,14 @@ public class Fragment2 extends Fragment {
         CustomListAdapter adapter = new CustomListAdapter(getActivity(),
                 R.layout.cars, arrayList);
         listview.setAdapter( adapter);
-
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
+                                    long id) {
+                Log.i("ListView","element click");
+                Toast.makeText(getContext(), "You click!", Toast.LENGTH_SHORT).show();
+            }
+        });
         return view1;
     }
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
